@@ -54,3 +54,4 @@ def laplacian_eigenmaps(X:np.ndarray, dim: int, sigma: float, epsilon: float, no
     return U
 
 #proj = laplacian_eigenmaps(X_mnist, dim, sigma=8, epsilon=0.01, normalize=True)
+#np.save('spectral_clustering_embeddings.npy',proj)
