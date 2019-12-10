@@ -7,15 +7,17 @@ import chart_studio.plotly as py
 import plotly.graph_objs as go
 from ipywidgets import widgets
 from scipy.special import softmax
+import pickle
 import sys
 sys.path.append("..")
 from config import *
 
 
+
 # Create HTML formatted text for the answer of the query
 def create_text(keys_ls,df_node):
     if len(keys_ls) == 0:
-        "No pages found"
+        base_text = "No pages found"
     else:
         base_text = "The most prominent pages are :<ul>"
         for key in keys_ls:
@@ -120,6 +122,41 @@ def create_plot_items(df_node,df_edge,labels,color_node,texts_to_show):
 
     # Create Figure
     g = go.FigureWidget(data=[trace1, trace2],layout=layout)
+    
+    # Title of the visualization
+    title = widgets.HTML(
+        value="<h3> Wikipedia Recommender System </h3>",
+    )
+
+    # Some help text
+    annotations = widgets.HTML(
+        value="<h4> By clicking on a node, you will be directed on the corresponding web page. </h4>",
+    )
+    
+    # Text Box for the query
+    textbox_query = widgets.Text(
+        value='',
+        placeholder='Type something',
+        description='Query:',
+        disabled=False
+    )
+
+    # Select Method
+    selector = widgets.Select(
+        options=METHODS,
+        value='Node2Vec',
+        description='Method:',
+        disabled=False
+    )
+
+    query_answer = widgets.HTML(value='')
+    
+    return title, annotations, textbox_query, selector, query_answer, g
+
+
+def load_graph(filepath):
+    with open(filepath,'rb') as f:
+        g = pickle.load(f)
     
     # Title of the visualization
     title = widgets.HTML(
