@@ -11,22 +11,25 @@ class Bert_embedder:
     def __init__(self, tokenizer, model, node_embeddings):
         self.tokenizer = tokenizer
         self.model = model
+        self.model.eval()
         self.node_embeddings = node_embeddings
         
     def compute_similarities(self, vector, topk):
-        similarities = cosine(vector,self.node_embeddings)
-        top_k_indexes = np.argsort(similarities)[-topk:]
+        similarities = cosine(vector,self.node_embeddings).reshape(-1)
+        top_k_indexes = list(np.argsort(similarities)[-topk:])
         top_k_similarities = similarities[top_k_indexes]
         return dict(zip(top_k_indexes, top_k_similarities))
         
     def find_most_similar_articles(self,query,topk):
         # Encode text
-        input_ids = torch.tensor([tokenizer.encode(query, add_special_tokens=True)])  # Add special tokens takes care of adding [CLS], [SEP], <s>... tokens in the right way for each model.
+        input_ids = torch.tensor([self.tokenizer.encode(query, add_special_tokens=True)])  # Add special tokens takes care of adding [CLS], [SEP], <s>... tokens in the right way for each model.
         with torch.no_grad():
-            last_hidden_states = model(input_ids)[0]
+            last_hidden_states = self.model(input_ids)[0]
+            last_hidden_states = last_hidden_states.squeeze().mean(dim=0).numpy()
+            
         vector = last_hidden_states.reshape(1,-1)
         
-        return compute_similarities(vector,topk)
+        return self.compute_similarities(vector,topk)
     
 def process_query_node2vec(query, model, topk, df_node):
     splitted_query = query.split(',')
