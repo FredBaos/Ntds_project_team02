@@ -40,7 +40,7 @@ def compute_color(preds):
         color_output[k] = v/diff
     return color_output
 
-def create_plot_items(df_node,df_edge,labels,color_node,texts_to_show):
+def create_plot_items(df_node,df_edge,labels,color_node,texts_to_show,color_edge):
     N = len(df_node)
     
     # Extract list
@@ -68,7 +68,7 @@ def create_plot_items(df_node,df_edge,labels,color_node,texts_to_show):
                    y=Ye,
                    z=Ze,
                    mode='lines',
-                   line=dict(color='rgb(125,125,125)', width=1),
+                   line=dict(color=color_edge, width=1),
                    hoverinfo='none'
                    )
     # Plot the nodes
@@ -80,7 +80,7 @@ def create_plot_items(df_node,df_edge,labels,color_node,texts_to_show):
                    marker=dict(symbol='circle',
                                  size=6,
                                  color=color_node,
-                                 colorscale='Reds',
+                                 colorscale='Rainbow',
                                  line=dict(color='rgb(50,50,50)', width=0.5),
                                    colorbar=dict(
                                         title=""
@@ -88,7 +88,7 @@ def create_plot_items(df_node,df_edge,labels,color_node,texts_to_show):
                                  ),
                    text=texts_to_show,
                    textposition="top center",
-                   textfont = {'size':30},
+                   textfont = {'size':60},
                    hovertext=labels,
                    hoverinfo='text',   
                    customdata=urls
