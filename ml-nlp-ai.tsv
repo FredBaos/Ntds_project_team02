@@ -1,0 +1,488 @@
+source	target	depth
+machine learning	automated machine learning	1
+machine learning	big data	1
+machine learning	explanation-based learning	1
+machine learning	predictive analytics	1
+machine learning	quantum machine learning	1
+machine learning	machine learning in bioinformatics	1
+quantum machine learning	quantum computing	2
+quantum machine learning	quantum algorithm for linear systems of equations	2
+quantum machine learning	quantum annealing	2
+quantum machine learning	quantum neural network	2
+quantum machine learning	quantum image	2
+predictive analytics	actuarial science	2
+predictive analytics	algorithmic trading	2
+predictive analytics	computational sociology	2
+predictive analytics	criminal reduction utilising statistical history	2
+predictive analytics	disease surveillance	2
+predictive analytics	learning analytics	2
+predictive analytics	odds algorithm	2
+predictive analytics	pattern recognition	2
+predictive analytics	predictive inference	2
+predictive analytics	predictive policing	2
+predictive analytics	social media analytics	2
+explanation-based learning	one-shot learning	2
+big data	big data ethics	2
+big data	big data maturity model	2
+big data	big memory	2
+big data	data curation	2
+big data	data defined storage	2
+big data	data lineage	2
+big data	data philanthropy	2
+big data	data science	2
+big data	datafication	2
+big data	in-memory processing	2
+big data	urban informatics	2
+big data	very large database	2
+big data	xldb	2
+big data	data analysis	2
+automated machine learning	neural architecture search	2
+automated machine learning	hyperparameter optimization	2
+automated machine learning	model selection	2
+automated machine learning	neuroevolution	2
+automated machine learning	self-tuning	2
+natural language processing	1 the road	1
+natural language processing	automated essay scoring	1
+natural language processing	biomedical text mining	1
+natural language processing	compound term processing	1
+natural language processing	computational linguistics	1
+natural language processing	computer-assisted reviewing	1
+natural language processing	controlled natural language	1
+natural language processing	deep learning	1
+natural language processing	deep linguistic processing	1
+natural language processing	distributional semantics	1
+natural language processing	foreign language reading aid	1
+natural language processing	foreign language writing aid	1
+natural language processing	information extraction	1
+natural language processing	information retrieval	1
+natural language processing	language and communication technologies	1
+natural language processing	language technology	1
+natural language processing	latent semantic indexing	1
+natural language processing	native-language identification	1
+natural language processing	natural language programming	1
+natural language processing	natural language user interface	1
+natural language processing	query expansion	1
+natural language processing	reification (linguistics)	1
+natural language processing	speech processing	1
+natural language processing	spoken dialogue system	1
+natural language processing	text-proofing	1
+natural language processing	text simplification	1
+natural language processing	transformer (machine learning model)	1
+natural language processing	truecasing	1
+natural language processing	question answering	1
+natural language processing	word2vec	1
+artificial intelligence	abductive reasoning	1
+artificial intelligence	a.i. rising	1
+artificial intelligence	artificial intelligence arms race	1
+artificial intelligence	behavior selection algorithm	1
+artificial intelligence	business process automation	1
+artificial intelligence	case-based reasoning	1
+artificial intelligence	citizen science	1
+artificial intelligence	commonsense reasoning	1
+artificial intelligence	emergent algorithm	1
+artificial intelligence	evolutionary computation	1
+artificial intelligence	glossary of artificial intelligence	1
+artificial intelligence	machine learning	1
+artificial intelligence	mathematical optimization	1
+artificial intelligence	multi-agent system	1
+artificial intelligence	personality computing	1
+artificial intelligence	robotic process automation	1
+artificial intelligence	soft computing	1
+artificial intelligence	universal basic income	1
+artificial intelligence	weak ai	1
+weak ai	deep learning	2
+weak ai	expert system	2
+weak ai	history of artificial intelligence	2
+weak ai	intelligent personal assistant	2
+weak ai	machine learning	2
+weak ai	philosophy of artificial intelligence	2
+weak ai	strong artificial intelligence	2
+universal basic income	automation and the future of jobs	2
+universal basic income	basic income around the world	2
+universal basic income	basic income pilots	2
+universal basic income	cash transfers	2
+universal basic income	citizen's dividend	2
+universal basic income	economic, social and cultural rights	2
+universal basic income	equality of outcome	2
+universal basic income	fairtax	2
+universal basic income	geolibertarianism	2
+universal basic income	givedirectly	2
+universal basic income	global basic income	2
+universal basic income	guaranteed minimum income	2
+universal basic income	involuntary unemployment	2
+universal basic income	job guarantee	2
+universal basic income	left-libertarianism	2
+universal basic income	living wage	2
+universal basic income	mincome	2
+universal basic income	minimum wage	2
+universal basic income	negative income tax	2
+universal basic income	economy of cuba	2
+universal basic income	old age security	2
+universal basic income	quatinga velho	2
+universal basic income	post-scarcity economy	2
+universal basic income	redistribution of income and wealth	2
+universal basic income	refusal of work	2
+universal basic income	right to adequate standard of living	2
+universal basic income	social dividend	2
+universal basic income	social safety net	2
+universal basic income	speenhamland system	2
+universal basic income	the triple revolution	2
+universal basic income	unemployment benefits	2
+universal basic income	universal basic services	2
+universal basic income	universal credit	2
+universal basic income	welfare capitalism	2
+universal basic income	working time	2
+universal basic income	work–life balance	2
+multi-agent system	comparison of agent-based modeling software	2
+multi-agent system	agent-based computational economics	2
+multi-agent system	artificial brain	2
+multi-agent system	artificial intelligence	2
+multi-agent system	artificial life	2
+multi-agent system	artificial life framework	2
+multi-agent system	black box	2
+multi-agent system	blackboard system	2
+multi-agent system	complex systems	2
+multi-agent system	discrete event simulation	2
+multi-agent system	distributed artificial intelligence	2
+multi-agent system	emergence	2
+multi-agent system	evolutionary computation	2
+multi-agent system	game theory	2
+multi-agent system	human-based genetic algorithm	2
+multi-agent system	knowledge query and manipulation language	2
+multi-agent system	microbial intelligence	2
+multi-agent system	multi-agent planning	2
+multi-agent system	pattern-oriented modeling	2
+multi-agent system	platbox project	2
+multi-agent system	reinforcement learning	2
+multi-agent system	scientific community metaphor	2
+multi-agent system	self-reconfiguring modular robot	2
+multi-agent system	simulated reality	2
+multi-agent system	social simulation	2
+multi-agent system	software agent	2
+multi-agent system	swarm intelligence	2
+multi-agent system	swarm robotics	2
+mathematical optimization	brachistochrone	2
+mathematical optimization	curve fitting	2
+mathematical optimization	deterministic global optimization	2
+mathematical optimization	goal programming	2
+mathematical optimization	least squares	2
+mathematical optimization	mathematical optimization society	2
+mathematical optimization	process optimization	2
+mathematical optimization	simulation-based optimization	2
+mathematical optimization	test functions for optimization	2
+mathematical optimization	variational calculus	2
+mathematical optimization	vehicle routing problem	2
+glossary of artificial intelligence	artificial intelligence	2
+glossary of artificial intelligence	glossary of machine vision	2
+evolutionary computation	adaptive dimensional search	2
+evolutionary computation	artificial development	2
+evolutionary computation	autoconstructive	2
+evolutionary computation	developmental biology	2
+evolutionary computation	digital organism	2
+evolutionary computation	estimation of distribution algorithm	2
+evolutionary computation	evolutionary robotics	2
+evolutionary computation	evolved antenna	2
+evolutionary computation	fitness approximation	2
+evolutionary computation	fitness function	2
+evolutionary computation	fitness landscape	2
+evolutionary computation	genetic operators	2
+evolutionary computation	grammatical evolution	2
+evolutionary computation	human-based evolutionary computation	2
+evolutionary computation	inferential programming	2
+evolutionary computation	interactive evolutionary computation	2
+evolutionary computation	mutation testing	2
+evolutionary computation	no free lunch in search and optimization	2
+evolutionary computation	program synthesis	2
+evolutionary computation	test functions for optimization	2
+evolutionary computation	universal darwinism	2
+emergent algorithm	emergence	2
+emergent algorithm	evolutionary computation	2
+emergent algorithm	fuzzy logic	2
+emergent algorithm	genetic algorithm	2
+emergent algorithm	heuristic	2
+citizen science	genealogy	2
+citizen science	independent scientist	2
+citizen science	independent scholar	2
+citizen science	open science	2
+citizen science	open-source intelligence	2
+citizen science	open-source lab (book)	2
+citizen science	outsider art	2
+citizen science	participation (decision making)	2
+citizen science	reinventing discovery	2
+citizen science	popular science	2
+citizen science	public participation	2
+citizen science	scientific instrument	2
+citizen science	virtual volunteering	2
+case-based reasoning	abductive reasoning	2
+case-based reasoning	duck test	2
+case-based reasoning	i know it when i see it	2
+case-based reasoning	commonsense reasoning	2
+case-based reasoning	purposeful omission	2
+case-based reasoning	decision tree	2
+case-based reasoning	genetic algorithm	2
+case-based reasoning	pattern matching	2
+case-based reasoning	analogy	2
+case-based reasoning	k-line (artificial intelligence)	2
+case-based reasoning	ripple down rules	2
+case-based reasoning	casuistry	2
+case-based reasoning	similarity heuristic	2
+business process automation	business-driven development	2
+business process automation	business process model and notation	2
+business process automation	business process reengineering	2
+business process automation	business process execution language	2
+business process automation	business rules engine	2
+business process automation	comparison of business integration software	2
+business process automation	job scheduler	2
+business process automation	real-time enterprise	2
+business process automation	runbook	2
+behavior selection algorithm	cognitive model	2
+behavior selection algorithm	behavioral modeling	2
+behavior selection algorithm	behavioral modeling in hydrology	2
+behavior selection algorithm	behavioral modeling in computer-aided design	2
+behavior selection algorithm	behavioral modeling language	2
+behavior selection algorithm	case-based reasoning	2
+behavior selection algorithm	model-based reasoning	2
+artificial intelligence arms race	arms race	2
+artificial intelligence arms race	artificial intelligence	2
+artificial intelligence arms race	artificial general intelligence	2
+artificial intelligence arms race	ethics of artificial intelligence	2
+artificial intelligence arms race	existential risk from artificial general intelligence	2
+artificial intelligence arms race	global issue	2
+artificial intelligence arms race	lethal autonomous weapon	2
+artificial intelligence arms race	military robot	2
+artificial intelligence arms race	unmanned combat aerial vehicle	2
+abductive reasoning	argument	2
+abductive reasoning	argumentation theory	2
+abductive reasoning	attribution (psychology)	2
+abductive reasoning	charles sanders peirce bibliography	2
+abductive reasoning	critical thinking	2
+abductive reasoning	defeasible reasoning	2
+abductive reasoning	doug walton	2
+abductive reasoning	duck test	2
+abductive reasoning	gregory bateson	2
+abductive reasoning	heuristic	2
+abductive reasoning	inductive probability	2
+abductive reasoning	logical reasoning	2
+abductive reasoning	maximum likelihood	2
+abductive reasoning	sensemaking	2
+abductive reasoning	sign relation	2
+abductive reasoning	statistical model	2
+word2vec	autoencoder	2
+word2vec	document-term matrix	2
+word2vec	feature extraction	2
+word2vec	feature learning	2
+word2vec	language model	2
+word2vec	vector space model	2
+word2vec	thought vector	2
+word2vec	fasttext	2
+word2vec	glove (machine learning)	2
+word2vec	normalized compression distance	2
+text simplification	automated paraphrasing	2
+text simplification	controlled natural language	2
+text simplification	lexical simplification	2
+text simplification	lexical substitution	2
+text simplification	semantic compression	2
+text simplification	text normalization	2
+text simplification	simplified technical english	2
+text simplification	basic english	2
+text-proofing	american and british english spelling differences	2
+text-proofing	distributed proofreaders	2
+text-proofing	etaoin shrdlu	2
+text-proofing	fact checking	2
+text-proofing	galley proof	2
+text-proofing	iso 5776	2
+text-proofing	obelism	2
+text-proofing	printing press check	2
+text-proofing	style guide	2
+text-proofing	typographical syntax	2
+text-proofing	writing circle	2
+speech processing	neurocomputational speech processing	2
+speech processing	speech coding	2
+speech processing	speech technology	2
+speech processing	natural language processing	2
+reification (linguistics)	drinker paradox	2
+reification (linguistics)	nonfirstorderizability	2
+reification (linguistics)	reification (computer science)	2
+reification (linguistics)	reification (fallacy)	2
+reification (linguistics)	reification (knowledge representation)	2
+query expansion	document retrieval	2
+query expansion	information retrieval	2
+query expansion	linguistics	2
+query expansion	morphology (linguistics)	2
+query expansion	natural language processing	2
+query expansion	search engine	2
+query expansion	search engine indexing	2
+query expansion	stemming	2
+natural language user interface	conversational user interface	2
+natural language user interface	natural user interface	2
+natural language user interface	natural-language programming	2
+natural language user interface	voice user interface	2
+natural language user interface	chatterbot	2
+natural language user interface	noisy text	2
+natural language user interface	question answering	2
+natural language user interface	selection-based search	2
+natural language user interface	semantic search	2
+natural language user interface	semantic query	2
+natural language user interface	semantic web	2
+natural language programming	controlled natural language	2
+natural language programming	context-free language	2
+natural language programming	domain-specific language	2
+natural language programming	end-user programming	2
+natural language programming	knowledge representation	2
+natural language programming	natural-language processing	2
+natural language programming	automatic programming	2
+natural language programming	very high-level programming language	2
+natural language programming	applescript	2
+natural language programming	attempto controlled english	2
+natural language programming	cobol	2
+natural language programming	cleartalk	2
+natural language programming	flow-matic	2
+natural language programming	hypertalk	2
+natural language programming	inform 7	2
+natural language programming	joss	2
+natural language programming	software ag	2
+natural language programming	transcript (programming language)	2
+natural language programming	structured query language	2
+natural language programming	xtalk	2
+native-language identification	crosslinguistic influence	2
+native-language identification	foreign language writing aid	2
+native-language identification	computer-assisted language learning	2
+native-language identification	language education	2
+native-language identification	natural language processing	2
+native-language identification	language transfer	2
+latent semantic indexing	coh-metrix	2
+latent semantic indexing	compound term processing	2
+latent semantic indexing	distributional semantics	2
+latent semantic indexing	explicit semantic analysis	2
+latent semantic indexing	latent semantic mapping	2
+latent semantic indexing	latent semantic structure indexing	2
+latent semantic indexing	principal components analysis	2
+latent semantic indexing	probabilistic latent semantic analysis	2
+latent semantic indexing	spamdexing	2
+latent semantic indexing	word vector	2
+latent semantic indexing	topic model	2
+latent semantic indexing	latent dirichlet allocation	2
+information retrieval	adversarial information retrieval	2
+information retrieval	collaborative information seeking	2
+information retrieval	computer memory	2
+information retrieval	controlled vocabulary	2
+information retrieval	cross-language information retrieval	2
+information retrieval	data mining	2
+information retrieval	european summer school in information retrieval	2
+information retrieval	human–computer information retrieval	2
+information retrieval	information extraction	2
+information retrieval	information retrieval facility	2
+information retrieval	knowledge visualization	2
+information retrieval	multimedia information retrieval	2
+information retrieval	personal information management	2
+information retrieval	relevance (information retrieval)	2
+information retrieval	relevance feedback	2
+information retrieval	nearest centroid classifier	2
+information retrieval	index (search engine)	2
+information retrieval	social information seeking	2
+information retrieval	special interest group on information retrieval	2
+information retrieval	subject indexing	2
+information retrieval	temporal information retrieval	2
+information retrieval	tf-idf	2
+information retrieval	xml retrieval	2
+information retrieval	web mining	2
+information extraction	ontology extraction	2
+information extraction	applications of artificial intelligence	2
+information extraction	concept mining	2
+information extraction	darpa tipster program	2
+information extraction	enterprise search	2
+information extraction	faceted search	2
+information extraction	knowledge extraction	2
+information extraction	named entity recognition	2
+information extraction	nutch	2
+information extraction	semantic translation	2
+information extraction	textmining	2
+information extraction	web scraping	2
+information extraction	open information extraction	2
+information extraction	data extraction	2
+foreign language writing aid	computer-assisted language learning	2
+foreign language writing aid	foreign-language reading aid	2
+foreign language writing aid	language education	2
+foreign language writing aid	second language	2
+foreign language reading aid	anki (software)	2
+foreign language reading aid	babbel	2
+foreign language reading aid	the alpheios project	2
+foreign language reading aid	community language learning	2
+foreign language reading aid	duolingo	2
+foreign language reading aid	intelligent computer-assisted language instruction	2
+foreign language reading aid	glossary of language teaching terms and ideas	2
+foreign language reading aid	language acquisition	2
+foreign language reading aid	language education	2
+foreign language reading aid	language exchange	2
+foreign language reading aid	language immersion	2
+foreign language reading aid	language mooc	2
+foreign language reading aid	online learning community	2
+foreign language reading aid	second language acquisition	2
+foreign language reading aid	smigin	2
+foreign language reading aid	tandem language learning	2
+foreign language reading aid	virtual world language learning	2
+foreign language reading aid	social media language learning	2
+distributional semantics	co-occurrence	2
+distributional semantics	gensim	2
+distributional semantics	phraseme	2
+distributional semantics	random indexing	2
+distributional semantics	sentence embedding	2
+distributional semantics	statistical semantics	2
+distributional semantics	word2vec	2
+distributional semantics	word embedding	2
+distributional semantics	scott deerwester	2
+distributional semantics	susan dumais	2
+distributional semantics	j. r. firth	2
+distributional semantics	george furnas	2
+distributional semantics	zellig harris	2
+distributional semantics	richard hirschman	2
+distributional semantics	thomas landauer	2
+distributional semantics	magnus sahlgren	2
+distributional semantics	hinrich schütze	2
+deep linguistic processing	combinatory categorial grammar	2
+deep linguistic processing	head-driven phrase structure grammar	2
+deep linguistic processing	lexical functional grammar	2
+deep linguistic processing	natural language processing	2
+deep linguistic processing	tree-adjoining grammar	2
+deep learning	applications of artificial intelligence	2
+deep learning	comparison of deep learning software	2
+deep learning	compressed sensing	2
+deep learning	echo state network	2
+deep learning	liquid state machine	2
+deep learning	reservoir computing	2
+deep learning	sparse coding	2
+controlled natural language	constructed language	2
+controlled natural language	knowledge representation and reasoning	2
+controlled natural language	natural language processing	2
+controlled natural language	controlled vocabulary	2
+controlled natural language	controlled language in machine translation	2
+controlled natural language	structured english	2
+controlled natural language	simple english wikipedia	2
+computer-assisted reviewing	computer-assisted translation	2
+computer-assisted reviewing	language industry	2
+computer-assisted reviewing	translation memory	2
+computational linguistics	artificial intelligence in fiction	2
+computational linguistics	collostructional analysis	2
+computational linguistics	computational lexicology	2
+computational linguistics	computational linguistics (journal)	2
+computational linguistics	computational models of language acquisition	2
+computational linguistics	computational semantics	2
+computational linguistics	computational semiotics	2
+computational linguistics	computer-assisted reviewing	2
+computational linguistics	dialog systems	2
+computational linguistics	glottochronology	2
+computational linguistics	grammar induction	2
+computational linguistics	human speechome project	2
+computational linguistics	internet linguistics	2
+computational linguistics	lexicostatistics	2
+computational linguistics	natural language processing	2
+computational linguistics	natural language user interface	2
+computational linguistics	quantitative linguistics	2
+computational linguistics	semantic relatedness	2
+computational linguistics	semantometrics	2
+computational linguistics	systemic functional linguistics	2
+computational linguistics	translation memory	2
+computational linguistics	universal networking language	2
+compound term processing	concept searching limited	2
+compound term processing	enterprise search	2
+compound term processing	information retrieval	2
