@@ -44,10 +44,13 @@ def spectral_decomposition(laplacian: np.ndarray):
     return np.linalg.eigh(laplacian)
 
 
-def laplacian_eigenmaps(X:np.ndarray, dim: int, sigma: float, epsilon: float, normalize: bool):
+def laplacian_eigenmaps(X:np.ndarray, dim: int, sigma: float, epsilon: float, normalize: bool, use_similarity=False):
     """ Return:
         coords (n x dim array): new coordinates for the data points."""
-    adjacency = epsilon_similarity_graph(X, sigma, epsilon)
+    if use_similarity:
+        adjacency = epsilon_similarity_graph(X, sigma, epsilon)
+    else:
+        adjacency = X
     laplacian = compute_laplacian(adjacency, normalize)
     _, U = spectral_decomposition(laplacian)
     U = U[:,1:dim+1]
