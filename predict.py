@@ -47,6 +47,9 @@ def query_answers_spectral(query, matrix, ordered_nodes, df_node, name2idx_adjac
         filtered = df_node[df_node.name==x]
         if len(filtered)!=0:
             filtered_query.append(x)
+            
+    if len(filtered_query)==0:
+        return None
     
     vectors = []
     for w in filtered_query:
