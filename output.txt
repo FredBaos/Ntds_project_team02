@@ -1,0 +1,259 @@
+
+----------
+
+machine learning
+Node2Vec
+{'big data': 0.6501414179801941,
+ 'explanation-based learning': 0.7760776877403259,
+ 'hyperparameter optimization': 0.653113067150116,
+ 'machine learning': 1.0,
+ 'machine learning in bioinformatics': 0.7749866247177124,
+ 'model selection': 0.6375687122344971,
+ 'one-shot learning': 0.7259390354156494,
+ 'quantum algorithm for linear systems of equations': 0.6351808905601501,
+ 'quantum computing': 0.6512392163276672,
+ 'quantum machine learning': 0.6697080135345459}
+Spectral
+{'automated machine learning': 0.4204383300978423,
+ 'explanation-based learning': 0.838330009827623,
+ 'gene expression programming': 0.3777796271611654,
+ 'hyperparameter optimization': 0.31078636412537786,
+ 'machine learning': 0.9999999999999999,
+ 'machine learning in bioinformatics': 0.9117935296789235,
+ 'one-shot learning': 0.5514595344817341,
+ 'parallel distributed processing': 0.317686364681948,
+ 'quantum machine learning': 0.3574238653523281,
+ 'weak ai': 0.33047310064757457}
+FastText
+{'applications of machine learning': 0.8158166,
+ 'automated machine learning': 0.830628,
+ 'foreign language reading aid': 0.8092079,
+ 'machine learning': 0.8147698,
+ 'machine learning in bioinformatics': 0.812845,
+ 'online learning community': 0.819335,
+ 'quantum machine learning': 0.82862264,
+ 'rule-based machine learning': 0.8169218,
+ 'tandem language learning': 0.80975777,
+ 'virtual world language learning': 0.81732464}
+
+----------
+
+data visualization
+Node2Vec
+{'climate change art': 0.7075372934341431,
+ 'data presentation architecture': 0.6924648284912109,
+ 'data science': 0.7257713079452515,
+ 'data visualization': 1.0,
+ 'data warehouse': 0.7618759870529175,
+ 'environmentalism': 0.7029061317443848,
+ 'information visualization': 0.6906346082687378,
+ 'statistical analysis': 0.7043076753616333,
+ 'statistical graphics': 0.6933884620666504,
+ 'warming stripes': 0.7102994918823242}
+Spectral
+{'artificial neural network': 0.26642506973394353,
+ 'climate change art': 0.3836085381001166,
+ 'data profiling': 0.24416549952071565,
+ 'data science': 0.48645039779279264,
+ 'data visualization': 0.9999999999999998,
+ 'data warehouse': 0.8651665074054732,
+ 'statistical analysis': 0.2679350077024296,
+ 'statistical graphics': 0.2878169457521892,
+ 'visual journalism': 0.29163749058916555,
+ 'warming stripes': 0.2766661864820982}
+FastText
+{'avizo (software)': 0.8666201,
+ 'data presentation architecture': 0.866222,
+ 'getaviz': 0.8600331,
+ 'information visualization': 0.86384,
+ 'paraview': 0.87081414,
+ 'software visualization': 0.87063104,
+ 'sonargraph': 0.8599391,
+ 'sourcetrail': 0.8646059,
+ 'statistical graphics': 0.86150295,
+ 'vis5d': 0.8646783}
+
+----------
+
+natural language processing
+Node2Vec
+{'1 the road': 0.8044964671134949,
+ 'automated essay scoring': 0.7977632284164429,
+ 'biomedical text mining': 0.7619948387145996,
+ 'foreign language writing aid': 0.7273749113082886,
+ 'language and communication technologies': 0.8172045946121216,
+ 'language technology': 0.8317603468894958,
+ 'natural language processing': 1.0,
+ 'spoken dialogue system': 0.7978963851928711,
+ 'transformer (machine learning model)': 0.7998125553131104,
+ 'truecasing': 0.7730481028556824}
+Spectral
+{'1 the road': 0.8403521666596355,
+ 'automated essay scoring': 0.8403521666596521,
+ 'biomedical text mining': 0.8403521666596515,
+ 'language and communication technologies': 0.8403521666596518,
+ 'language technology': 0.840352166659652,
+ 'natural language processing': 1.0,
+ 'question answering': 0.5481413493724195,
+ 'spoken dialogue system': 0.8403521666596534,
+ 'transformer (machine learning model)': 0.8403521666596533,
+ 'truecasing': 0.8403521666596532}
+FastText
+{'context-free language': 0.8851585,
+ 'deep linguistic processing': 0.8892258,
+ 'foreign language writing aid': 0.8866448,
+ 'language transfer': 0.8874208,
+ 'natural language processing': 0.9019424,
+ 'natural language programming': 0.8902139,
+ 'natural-language processing': 0.8937786,
+ 'natural-language programming': 0.8869565,
+ 'neurocomputational speech processing': 0.8847969,
+ 'very high-level programming language': 0.8889306}
+
+----------
+
+artificial intelligence
+Node2Vec
+{'a.i. rising': 0.7479010224342346,
+ 'artificial intelligence': 1.0,
+ 'behavior selection algorithm': 0.6668151021003723,
+ 'citizen science': 0.6568251848220825,
+ 'glossary of artificial intelligence': 0.6790297031402588,
+ 'goal programming': 0.6589077711105347,
+ 'independent scientist': 0.65474534034729,
+ 'personality computing': 0.7336233854293823,
+ 'robotic process automation': 0.7532231211662292,
+ 'soft computing': 0.7484114170074463}
+Spectral
+{'a.i. rising': 0.836720747086299,
+ 'artificial intelligence': 0.9999999999999999,
+ 'commonsense reasoning': 0.5088298241690558,
+ 'emergent algorithm': 0.41869124695334714,
+ 'glossary of artificial intelligence': 0.708758120177456,
+ 'glossary of machine vision': 0.4511292702783901,
+ 'machine learning': 0.28782145093090655,
+ 'personality computing': 0.8367207470863005,
+ 'robotic process automation': 0.8367207470863005,
+ 'soft computing': 0.8367207470863008}
+FastText
+{'artificial general intelligence': 0.7870767,
+ 'artificial intelligence': 0.772377,
+ 'artificial intelligence arms race': 0.80723226,
+ 'distributed artificial intelligence': 0.7751965,
+ 'ethics of artificial intelligence': 0.80680966,
+ 'existential risk from artificial general intelligence': 0.7939551,
+ 'intellect': 0.77536637,
+ 'neuroscience and intelligence': 0.7755938,
+ 'philosophy of artificial intelligence': 0.7762831,
+ 'strong artificial intelligence': 0.7827725}
+
+----------
+
+universal basic income
+Node2Vec
+{'basic income pilots': 0.9422433972358704,
+ 'fairtax': 0.9346083402633667,
+ 'geolibertarianism': 0.9330692291259766,
+ 'involuntary unemployment': 0.9422738552093506,
+ 'post-scarcity economy': 0.944305419921875,
+ 'quatinga velho': 0.9460572600364685,
+ 'social dividend': 0.942700982093811,
+ 'universal basic income': 1.0,
+ 'universal credit': 0.9459165334701538,
+ 'work–life balance': 0.9354488849639893}
+Spectral
+{'job guarantee': 0.9907504072540692,
+ 'post-scarcity economy': 0.9907504072540692,
+ 'refusal of work': 0.9907504072540694,
+ 'social dividend': 0.9907504072540694,
+ 'social safety net': 0.9907504072540693,
+ 'the triple revolution': 0.9907504072540694,
+ 'unemployment benefits': 0.9907504072540694,
+ 'universal basic income': 0.9999999999999998,
+ 'universal basic services': 0.9907504072540692,
+ 'working time': 0.9907504072540694}
+FastText
+{'basic income pilots': 0.9079072,
+ 'equality of outcome': 0.9046278,
+ 'global basic income': 0.9102486,
+ 'guaranteed minimum income': 0.916635,
+ 'negative income tax': 0.9027276,
+ 'redistribution of income and wealth': 0.90084916,
+ 'social safety net': 0.90107346,
+ 'universal basic income': 0.9122535,
+ 'universal credit': 0.9016007,
+ 'work–life balance': 0.89936894}
+
+----------
+
+word2vec
+Node2Vec
+{'document-term matrix': 0.9123996496200562,
+ 'fasttext': 0.8846474289894104,
+ 'feature extraction': 0.8947533369064331,
+ 'feature learning': 0.8565796613693237,
+ 'glove (machine learning)': 0.8787655830383301,
+ 'language model': 0.9108289480209351,
+ 'normalized compression distance': 0.9011745452880859,
+ 'thought vector': 0.8768148422241211,
+ 'vector space model': 0.8781679272651672,
+ 'word2vec': 0.9999999403953552}
+Spectral
+{'document-term matrix': 0.9724732751019626,
+ 'fasttext': 0.9724732751019626,
+ 'feature extraction': 0.9724732751019626,
+ 'feature learning': 0.9724732751019627,
+ 'glove (machine learning)': 0.9724732751019628,
+ 'language model': 0.9724732751019627,
+ 'normalized compression distance': 0.9724732751019627,
+ 'thought vector': 0.9724732751019627,
+ 'vector space model': 0.9724732751019627,
+ 'word2vec': 1.0}
+FastText
+{'brosl hasslacher': 0.07480762,
+ 'es-hyperneat': 0.13093983,
+ 'hinrich schütze': 0.10036888,
+ 'noogenesis': 0.07962038,
+ 'openworm': 0.071717516,
+ 'solarroller': 0.07592027,
+ 'technoself studies': 0.06950336,
+ 'tektology': 0.078952156,
+ 'votebots': 0.081101075,
+ 'word2vec': 0.092464134}
+
+----------
+
+analytics
+Node2Vec
+{'analytics': 1.0,
+ 'architectural analytics': 0.865903377532959,
+ 'behavioral analytics': 0.8734686970710754,
+ 'dashboard': 0.8652558326721191,
+ 'news analytics': 0.8649967908859253,
+ 'online analytical processing': 0.8719457387924194,
+ 'semantic analytics': 0.8716028928756714,
+ 'smart grid': 0.8683335781097412,
+ 'web analytics': 0.8825016021728516,
+ 'win–loss analytics': 0.8708006143569946}
+Spectral
+{'analysis': 0.9494671838175731,
+ 'analytics': 0.9999999999999999,
+ 'news analytics': 0.9494671838175733,
+ 'online analytical processing': 0.949467183817573,
+ 'online video analytics': 0.9494671838175732,
+ 'social analytics': 0.949467183817573,
+ 'software analytics': 0.9494671838175733,
+ 'speech analytics': 0.9494671838175731,
+ 'user behavior analytics': 0.9494671838175732,
+ 'web analytics': 0.949467183817573}
+FastText
+{'analytic applications': 0.7345926,
+ 'analytics': 0.7270327,
+ 'behavioral analytics': 0.7325906,
+ 'business analytics': 0.73746186,
+ 'business intelligence': 0.7258229,
+ 'cloud analytics': 0.72318554,
+ 'customer analytics': 0.73019266,
+ 'learning analytics': 0.72396684,
+ 'social analytics': 0.73868823,
+ 'web analytics': 0.73151225}
