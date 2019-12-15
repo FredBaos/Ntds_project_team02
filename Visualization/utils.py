@@ -17,9 +17,9 @@ from config import *
 # Create HTML formatted text for the answer of the query
 def create_text(keys_ls,df_node):
     if len(keys_ls) == 0:
-        base_text = "No pages found"
+        base_text = "<br>No pages found"
     else:
-        base_text = "The most prominent pages are :<ul>"
+        base_text = "<br>The most prominent pages are :<ul>"
         for key in keys_ls:
             filtered = df_node[df_node.index == key][['name','url']].values[0]
             url = filtered[1]
