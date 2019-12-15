@@ -80,7 +80,7 @@ def compute_similarities(vector, corpus, top_n=10):
     return similarities
 
 def query_answers_fasttext(query,vectors,walk_averaged_embeddings_dict_fastt,df_node,topn=10, return_idx=True):
-    embedding = vectors.query(query.split()).mean(axis=0)
+    embedding = vectors.query(query.replace(',', ' ').split()).mean(axis=0)
     similarities = compute_similarities(embedding, walk_averaged_embeddings_dict_fastt,topn)
     if return_idx:
         output = {}
