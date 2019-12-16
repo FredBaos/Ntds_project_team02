@@ -10,7 +10,15 @@ import pickle
 from pymagnitude import *
 from operator import itemgetter
 import wget
+from sklearn.decomposition import PCA
+from sklearn.manifold import TSNE
+from transformers import *
+from spectral_clustering import *
+from pymagnitude import *
+from pprint import pprint
 
+# Load pretrained fasttext model
+vectors = Magnitude("wiki-news-300d-1M-subword.magnitude")
 
 class QueryBot:
     def __init__(self, node2vec_model, proj_spectral, name2idx_adjacency, ordered_nodes, fasttext_vectors, fasttext_dict, df_node):
@@ -145,5 +153,52 @@ def load_models(folder, spectral_clustering_filename=SPECTRAL_CLUSTERING_FILENAM
         
     return query_bot
 
+def plot_projection(node_vectors, nodes, path, dim=2, projection_method=PCA, perplexity=3):
+    """Plot the projection of embeddings after applying a dimensionality reduction method."""
+    if projection_method == TSNE:
+        projection = projection_method(n_components=dim, perplexity=perplexity)
+    else:
+        projection = projection_method(n_components=dim)
+    projections = projection.fit_transform(node_vectors)
+    
+    plt.figure(figsize=(10,7))
+    plt.scatter(projections[:,0], projections[:,1])
+    for i, node in enumerate(nodes):
+        plt.annotate(node, xy=(projections[i,0], projections[i,1]))
+    plt.title("{} over {} dimensions".format(type(projection).__name__, dim))
+    plt.savefig(path)
 
+def get_vectors_spectral(nodes, proj, name2idx_adjacency):
+    vectors = []
+    for node in nodes:
+        idx = name2idx_adjacency[node]
+        vector = proj[idx]
+        vectors.append(vector.tolist()[0])
+    return vectors
+
+def fastt_embedding(text):
+    "Encode text using Fasttext model."
+    return vectors.query(text.split()).mean(axis=0)
+
+def get_weighted_walk_of_embeddings(walk, embeddings_dict, source_weight=0.75):
+    "Given a source embedding and a walk of embeddings, returns the weighted average of embeddings."
+    walk_weight = (1-source_weight)/(len(walk)-1)
+    embeddings = [embeddings_dict[node] for node in walk]
+    return source_weight*embeddings[0] + walk_weight*sum(embeddings[1:])
+
+def walk_averaged_embeddings_dict(embeddings_dict, walks, source_weight=0.75):
+    walk_embeddings_dict = {k:[] for k in embeddings_dict.keys()}
+
+    for walk in walks:
+        walk_embeddings_dict[walk[0]].append(get_weighted_walk_of_embeddings(walk, embeddings_dict, source_weight))
+
+    walk_averaged_embeddings_dict = {k:sum(v)/len(v) for k, v in walk_embeddings_dict.items()}
+    return walk_averaged_embeddings_dict
+
+def get_vectors_fasttext(nodes, walk_averaged_embeddings_dict_fastt):
+    vectors = []
+    for node in nodes:
+        vector = walk_averaged_embeddings_dict_fastt[node]
+        vectors.append(vector)
+    return vectors
  
