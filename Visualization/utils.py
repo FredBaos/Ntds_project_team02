@@ -1,9 +1,9 @@
-import igraph as ig
+#import igraph as ig
+#import chart_studio.plotly as py
 import pandas as pd
 import webbrowser
 import json
 import urllib.request
-import chart_studio.plotly as py
 import plotly.graph_objs as go
 from ipywidgets import widgets
 from scipy.special import softmax
@@ -17,16 +17,15 @@ from config import *
 # Create HTML formatted text for the answer of the query
 def create_text(keys_ls,df_node):
     if len(keys_ls) == 0:
-        base_text = "<br>No pages found"
+        base_text = "\n \n No pages found"
     else:
-        base_text = "<br>The most prominent pages are :<ul>"
+        base_text = "\n \n The most prominent pages are: \n"
         for key in keys_ls:
             filtered = df_node[df_node.index == key][['name','url']].values[0]
             url = filtered[1]
             name = filtered[0]
-            url_text = "<li><a href=" + url + """ target="_blank"> """ + name + "</a></li>"
+            url_text = "* [{}]({}) \n".format(name,url)
             base_text += url_text
-        base_text += "</ul>"
     return base_text
 
 # Compute color for the nodes

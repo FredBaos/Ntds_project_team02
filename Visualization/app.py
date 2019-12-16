@@ -67,9 +67,10 @@ app.layout = html.Div(
                                     "By clicking on a node, you will be directed on the corresponding web page."
                                 ),
                                 html.Br(),
-                                html.Span(" ", className="uppercase bold"),
+                                html.Span("Red edges mean that the pages are in the See also section on Wikipedia website."),
+                                html.Br(),
                                 html.Span(
-                                    "."
+                                    "The color represents the cosine similarity score."
                                 ),
                             ]
                         )
@@ -99,7 +100,7 @@ app.layout = html.Div(
                                     value="Node2Vec",
                                     className="radio__group",
                                 ),
-                                html.Div(
+                                dcc.Markdown(
                                     id='answer'
                                 ),
 
@@ -107,6 +108,8 @@ app.layout = html.Div(
                                     id="graph",
                                     figure=FIGURE,
                                 ),
+
+                                dcc.Markdown(id="url"),
                             ],
                             className="two-thirds column",
                         ),
@@ -115,11 +118,12 @@ app.layout = html.Div(
                 ),
                 html.Div(
                     [
-                        html.Span(
-                                    "By Team 2"
+                        html.Br(),
+                        html.P(
+                                    "By Team 2 - Network Tour of Data Science - EPFL"
                                 ),
                     ],
-                    className="container bg-white p-0",
+                    className="container p-0",
                 ),
             ],
             className="app__container",
@@ -144,7 +148,7 @@ def update_point(trace, points, selector):
         webbrowser.open_new_tab(url)
    
 @app.callback(
-    Output('hidden-div', 'children'),
+    Output('url', 'children'),
     [Input('graph', 'clickData')]
 )
 def display_click_data(clickData):
@@ -153,7 +157,9 @@ def display_click_data(clickData):
             pt = clickData['points'][0]
             try:
                 url = pt['customdata']
+                name = df_node[df_node.url==url].name.values[0]
                 webbrowser.open_new_tab(url)
+                return "Chosen node: [{}]({})".format(name,url)
             except:
                 return None
     return None
@@ -168,26 +174,42 @@ def find_index_edges(nodes_ls):
                 
     return edges_idx
 
-# From https://github.com/plotly/dash/issues/118
-def convert_html_to_dash(el,style = None):
-    CST_PERMITIDOS =  {'div','span','a','hr','br','p','b','i','u','s','h1','h2','h3','h4','h5','h6','ol','ul','li',
-                        'em','strong','cite','tt','pre','small','big','center','blockquote','address','font','img',
-                        'table','tr','td','caption','th','textarea','option'}
-    def __extract_style(el):
-        if not el.attrs.get("style"):
-            return None
-        return {k.strip():v.strip() for k,v in [x.split(": ") for x in el.attrs["style"].split(";")]}
+# # From https://github.com/plotly/dash/issues/118
+# def convert_html_to_dash(el,style = None):
+#     CST_PERMITIDOS =  {'div','span','a','hr','br','p','b','i','u','s','h1','h2','h3','h4','h5','h6','ol','ul','li',
+#                         'em','strong','cite','tt','pre','small','big','center','blockquote','address','font','img',
+#                         'table','tr','td','caption','th','textarea','option'}
+#     def __extract_style(el):
+#         if not el.attrs.get("style"):
+#             return None
+#         return {k.strip():v.strip() for k,v in [x.split(": ") for x in el.attrs["style"].split(";")]}
 
+#     if type(el) is str:
+#         return convert_html_to_dash(bs.BeautifulSoup(el,'html.parser'))
+#     if type(el) == bs.element.NavigableString:
+#         return str(el)
+#     else:
+#         name = el.name
+#         style = __extract_style(el) if style is None else style
+#         contents = [convert_html_to_dash(x) for x in el.contents]
+#         if name.title().lower() not in CST_PERMITIDOS:        
+#             return contents[0] if len(contents)==1 else html.Div(contents)
+#         return getattr(html,name.title())(contents,style = style)
+
+def extract_style(el):
+    if not el.attrs.get("style"):
+        return None
+    return {k.strip():v.strip() for k,v in [x.split(": ") for x in el.attrs["style"].split(";")]}
+
+def convert_html_to_dash(el,style = None):
     if type(el) is str:
         return convert_html_to_dash(bs.BeautifulSoup(el,'html.parser'))
     if type(el) == bs.element.NavigableString:
         return str(el)
     else:
         name = el.name
-        style = __extract_style(el) if style is None else style
+        style = extract_style(el) if style is None else style
         contents = [convert_html_to_dash(x) for x in el.contents]
-        if name.title().lower() not in CST_PERMITIDOS:        
-            return contents[0] if len(contents)==1 else html.Div(contents)
         return getattr(html,name.title())(contents,style = style)
 
 @app.callback(
@@ -201,15 +223,15 @@ def make_query(ns,nb,current_selector,query):
     color_node = color_node_original.copy()
     size_node = size_node_original.copy()
     color_edge = color_edge_original.copy()
-    html_text = ""
+    markdown_text = ""
     
     if query != "":
         preds = query_bot.make_prediction(query, current_selector)
         if preds == None:
-            html_text = create_text([],df_node)
+            markdown_text = create_text([],df_node)
         else:
             dict_colors = compute_color(preds)
-            html_text = create_text(list(dict_colors.keys()),df_node)
+            markdown_text = create_text(list(dict_colors.keys()),df_node)
 
             for k,v in dict_colors.items():
                 size_node[k] = 30
@@ -232,7 +254,7 @@ def make_query(ns,nb,current_selector,query):
             'layout': g.layout
             }
 
-    return convert_html_to_dash(html_text), fig
+    return markdown_text, fig
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run_server(host="0.0.0.0", port=80, debug=True)

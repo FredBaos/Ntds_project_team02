@@ -9,6 +9,7 @@ import os
 import pickle
 from pymagnitude import *
 from operator import itemgetter
+import wget
 
 
 class QueryBot:
@@ -41,6 +42,7 @@ def compute_similarities_matrix(vector, proj, topk):
     return dict(zip(top_k_indexes, top_k_similarities))
 
 def query_answers_spectral(query, matrix, ordered_nodes, df_node, name2idx_adjacency, topn=10, return_idx=True):
+    query = query.lower()
     splitted_query = query.split(',')
     filtered_query = []
     for x in splitted_query:
@@ -92,6 +94,7 @@ def query_answers_fasttext(query,vectors,walk_averaged_embeddings_dict_fastt,df_
         return similarities
 
 def query_answers_node2vec(query, model, df_node, topk, return_idx=True):
+    query = query.lower()
     splitted_query = query.split(',')
     filtered_query = filter(lambda x: x in model.wv.vocab, splitted_query)
     
@@ -129,8 +132,13 @@ def load_models(folder, spectral_clustering_filename=SPECTRAL_CLUSTERING_FILENAM
     with open(os.path.join(folder,fast_mean_filename),'rb') as f:
         fasttext_dict = pickle.load(f)
 
-    fasttext_vectors = Magnitude(os.path.join(folder,"wiki-news-300d-1M-subword.magnitude"))
-    
+    try:
+        fasttext_vectors = Magnitude(os.path.join(folder,"wiki-news-300d-1M-subword.magnitude"))
+    except:
+        print("Downloading Magnitude FIle")
+        wget.download("http://magnitude.plasticity.ai/fasttext/light/wiki-news-300d-1M-subword.magnitude")
+        fasttext_vectors = Magnitude(os.path.join(folder,"wiki-news-300d-1M-subword.magnitude"))
+        
     df_node = pd.read_csv(os.path.join(folder,df_node_filename))
 
     query_bot = QueryBot(node2vec,spectral_clustering_embed,name2idx_adjacency,ordered_nodes,fasttext_vectors,fasttext_dict,df_node)
