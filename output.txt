@@ -3,16 +3,16 @@
 
 machine learning
 Node2Vec
-{'automated machine learning': 0.6674492359161377,
- 'explanation-based learning': 0.7797187566757202,
- 'hyperparameter optimization': 0.65537029504776,
- 'machine learning': 0.9999998807907104,
- 'machine learning in bioinformatics': 0.8027423620223999,
- 'model selection': 0.6800190210342407,
- 'neural architecture search': 0.6889494061470032,
- 'one-shot learning': 0.7719295024871826,
- 'quantum annealing': 0.6702775955200195,
- 'quantum machine learning': 0.6867846250534058}
+{'automated machine learning': 0.663658082485199,
+ 'explanation-based learning': 0.7494704127311707,
+ 'machine learning': 0.9999999403953552,
+ 'machine learning in bioinformatics': 0.816347599029541,
+ 'one-shot learning': 0.7661568522453308,
+ 'quantum algorithm for linear systems of equations': 0.6752059459686279,
+ 'quantum annealing': 0.6800051927566528,
+ 'quantum computing': 0.6981178522109985,
+ 'quantum image': 0.6700842380523682,
+ 'quantum machine learning': 0.6974570751190186}
 Spectral
 {'automated machine learning': 0.42043833009783665,
  'explanation-based learning': 0.8383300098276105,
@@ -25,31 +25,31 @@ Spectral
  'quantum machine learning': 0.35742386535232484,
  'weak ai': 0.3304731006475745}
 FastText
-{'applications of machine learning': 0.8458637,
- 'automated machine learning': 0.86438537,
- 'computer-assisted language learning': 0.82606447,
- 'machine learning': 0.8569902,
- 'machine learning in bioinformatics': 0.8452753,
- 'never-ending language learning': 0.8190745,
- 'quantum machine learning': 0.85508,
- 'representation learning': 0.8123803,
- 'rule-based machine learning': 0.8562523,
- 'virtual world language learning': 0.8166387}
+{'applications of machine learning': 0.8471922,
+ 'automated machine learning': 0.8655547,
+ 'computer-assisted language learning': 0.8261335,
+ 'machine learning': 0.8592031,
+ 'machine learning in bioinformatics': 0.84714484,
+ 'never-ending language learning': 0.82114327,
+ 'quantum machine learning': 0.85458744,
+ 'representation learning': 0.81243217,
+ 'rule-based machine learning': 0.859492,
+ 'virtual world language learning': 0.8176204}
 
 ----------
 
 data visualization
 Node2Vec
-{'climate change art': 0.7176682949066162,
- 'data science': 0.7181499600410461,
+{'climate change art': 0.7316605448722839,
+ 'data presentation architecture': 0.707082986831665,
+ 'data science': 0.7075734734535217,
  'data visualization': 1.0,
- 'data warehouse': 0.7816128134727478,
- 'information visualization': 0.7231164574623108,
- 'interaction techniques': 0.7062644958496094,
- 'multivariate analysis of variance': 0.7173330187797546,
- 'statistical analysis': 0.7064580321311951,
- 'statistical graphics': 0.7093563079833984,
- 'warming stripes': 0.7232456207275391}
+ 'data warehouse': 0.7871693968772888,
+ 'information visualization': 0.7175626158714294,
+ 'interaction techniques': 0.703515350818634,
+ 'statistical analysis': 0.7095931768417358,
+ 'statistical graphics': 0.6999422907829285,
+ 'warming stripes': 0.6966724991798401}
 Spectral
 {'artificial neural network': 0.2664250697339181,
  'climate change art': 0.38360853810011725,
@@ -62,31 +62,31 @@ Spectral
  'visual journalism': 0.29163749058916694,
  'warming stripes': 0.27666618648209873}
 FastText
-{'data presentation architecture': 0.88224363,
- 'data visualization': 0.9035748,
- 'information visualization': 0.89049417,
- 'interactive visual analysis': 0.8573446,
- 'paraview': 0.8596668,
- 'scientific visualization': 0.8564858,
- 'software visualization': 0.8769201,
- 'sonargraph': 0.8567707,
- 'sourcetrail': 0.86061144,
- 'visualization (graphic)': 0.88136584}
+{'data presentation architecture': 0.8797765,
+ 'data visualization': 0.9023498,
+ 'information visualization': 0.8886957,
+ 'interactive visual analysis': 0.8615942,
+ 'paraview': 0.8640544,
+ 'scientific visualization': 0.8583758,
+ 'software visualization': 0.87736523,
+ 'sonargraph': 0.85747004,
+ 'sourcetrail': 0.8617414,
+ 'visualization (graphic)': 0.88323057}
 
 ----------
 
 natural language processing
 Node2Vec
-{'1 the road': 0.7839801907539368,
- 'automated essay scoring': 0.8153097629547119,
- 'biomedical text mining': 0.8078380823135376,
- 'language and communication technologies': 0.780882716178894,
- 'language technology': 0.77687007188797,
+{'1 the road': 0.7833513021469116,
+ 'automated essay scoring': 0.7777107954025269,
+ 'biomedical text mining': 0.8187804222106934,
+ 'language and communication technologies': 0.8116675615310669,
+ 'language technology': 0.7831205725669861,
+ 'native-language identification': 0.7320599555969238,
  'natural language processing': 1.0,
- 'question answering': 0.7342580556869507,
- 'spoken dialogue system': 0.7738577127456665,
- 'transformer (machine learning model)': 0.8225501179695129,
- 'truecasing': 0.8164111375808716}
+ 'spoken dialogue system': 0.7483770251274109,
+ 'transformer (machine learning model)': 0.8339418172836304,
+ 'truecasing': 0.7748024463653564}
 Spectral
 {'1 the road': 0.8403521666596514,
  'automated essay scoring': 0.8403521666596353,
@@ -99,31 +99,31 @@ Spectral
  'transformer (machine learning model)': 0.840352166659627,
  'truecasing': 0.8403521666596269}
 FastText
-{'computational models of language acquisition': 0.88433206,
- 'controlled natural language': 0.87610424,
- 'foreign language writing aid': 0.8820945,
- 'language technology': 0.8646456,
- 'language transfer': 0.87260413,
- 'natural language processing': 0.93071014,
- 'natural language programming': 0.89173687,
- 'natural-language processing': 0.9115828,
- 'natural-language programming': 0.86604446,
- 'very high-level programming language': 0.8710461}
+{'computational models of language acquisition': 0.8852813,
+ 'controlled natural language': 0.87483287,
+ 'foreign language writing aid': 0.88477236,
+ 'language technology': 0.8662971,
+ 'language transfer': 0.8746288,
+ 'natural language processing': 0.93206775,
+ 'natural language programming': 0.8891358,
+ 'natural-language processing': 0.9105099,
+ 'natural-language programming': 0.8670944,
+ 'very high-level programming language': 0.8699171}
 
 ----------
 
 artificial intelligence
 Node2Vec
-{'a.i. rising': 0.7446235418319702,
+{'a.i. rising': 0.7762136459350586,
  'artificial intelligence': 1.0,
- 'behavior selection algorithm': 0.6685227155685425,
- 'business process automation': 0.6684023141860962,
- 'business process model and notation': 0.6684922575950623,
- 'glossary of artificial intelligence': 0.6873673796653748,
- 'glossary of machine vision': 0.6765522360801697,
- 'personality computing': 0.7690918445587158,
- 'robotic process automation': 0.7646559476852417,
- 'soft computing': 0.7748766541481018}
+ 'behavior selection algorithm': 0.6854545474052429,
+ 'business process automation': 0.6830009818077087,
+ 'business process execution language': 0.6841135621070862,
+ 'glossary of artificial intelligence': 0.7237938642501831,
+ 'glossary of machine vision': 0.6931195855140686,
+ 'personality computing': 0.7425356507301331,
+ 'robotic process automation': 0.7643944025039673,
+ 'soft computing': 0.7758210897445679}
 Spectral
 {'a.i. rising': 0.8367207470862972,
  'artificial intelligence': 1.0,
@@ -136,31 +136,31 @@ Spectral
  'robotic process automation': 0.836720747086297,
  'soft computing': 0.8367207470862976}
 FastText
-{'artificial intelligence': 0.8013344,
- 'artificial intelligence arms race': 0.82879436,
- 'artificial intelligence marketing': 0.8273553,
- 'distributed artificial intelligence': 0.80863345,
- 'ethics of artificial intelligence': 0.81758696,
- 'existential risk from artificial general intelligence': 0.8063364,
- 'intelligence amplification': 0.7982367,
- 'marketing and artificial intelligence': 0.8112487,
- 'philosophy of artificial intelligence': 0.82658017,
- 'progress in artificial intelligence': 0.8083916}
+{'artificial general intelligence': 0.8011112,
+ 'artificial intelligence arms race': 0.82658434,
+ 'artificial intelligence marketing': 0.82482994,
+ 'distributed artificial intelligence': 0.8084742,
+ 'ethics of artificial intelligence': 0.8234539,
+ 'existential risk from artificial general intelligence': 0.8107252,
+ 'intelligence amplification': 0.7983024,
+ 'marketing and artificial intelligence': 0.8095698,
+ 'philosophy of artificial intelligence': 0.8263451,
+ 'progress in artificial intelligence': 0.80977535}
 
 ----------
 
 data visualization,machine learning
 Node2Vec
-{'big data': 0.7871792316436768,
- 'big data maturity model': 0.7396330833435059,
- 'data analysis': 0.7588239312171936,
- 'data philanthropy': 0.7553762197494507,
- 'data science': 0.7481527328491211,
- 'data visualization': 0.823012113571167,
- 'machine learning': 0.8226292133331299,
- 'structured data analysis (statistics)': 0.7372519373893738,
- 'very large database': 0.7527027130126953,
- 'xldb': 0.7535292506217957}
+{'big data': 0.7903826236724854,
+ 'big data maturity model': 0.7377495169639587,
+ 'data analysis': 0.7795017957687378,
+ 'data philanthropy': 0.7311704158782959,
+ 'data visualization': 0.8103587031364441,
+ 'datafication': 0.7746638059616089,
+ 'in-memory processing': 0.744223952293396,
+ 'machine learning': 0.8159056305885315,
+ 'urban informatics': 0.7488227486610413,
+ 'very large database': 0.7350540161132812}
 Spectral
 {'artificial intelligence': 0.271102955273117,
  'automated machine learning': 0.2977320221361117,
@@ -173,31 +173,31 @@ Spectral
  'machine learning': 0.707816615493422,
  'machine learning in bioinformatics': 0.5702837170210675}
 FastText
-{'applications of machine learning': 0.9217448,
- 'automated machine learning': 0.904433,
- 'data visualization': 0.8923553,
- 'getaviz': 0.896088,
- 'machine learning': 0.9291549,
- 'machine learning in bioinformatics': 0.9249935,
- 'representation learning': 0.89240354,
- 'software visualization': 0.9146643,
- 'sonargraph': 0.89653355,
- 'sourcetrail': 0.8990673}
+{'applications of machine learning': 0.9206166,
+ 'automated machine learning': 0.9054744,
+ 'data visualization': 0.89012754,
+ 'getaviz': 0.897325,
+ 'machine learning': 0.92723227,
+ 'machine learning in bioinformatics': 0.92543983,
+ 'representation learning': 0.89234465,
+ 'software visualization': 0.914062,
+ 'sonargraph': 0.8971371,
+ 'sourcetrail': 0.89999384}
 
 ----------
 
 artificial intelligence,natural language processing
 Node2Vec
-{'artificial intelligence': 0.745625376701355,
- 'cash transfers': 0.641746461391449,
- 'citizen science': 0.6330185532569885,
- 'language and communication technologies': 0.6324102282524109,
- 'natural language processing': 0.7681513428688049,
- 'noisy text': 0.6330470442771912,
- 'question answering': 0.6302170157432556,
- 'reification (knowledge representation)': 0.6524045467376709,
- 'transformer (machine learning model)': 0.6801176071166992,
- 'truecasing': 0.6837540864944458}
+{'1 the road': 0.6438471078872681,
+ 'artificial intelligence': 0.7480529546737671,
+ 'biomedical text mining': 0.6890102624893188,
+ 'foreign language writing aid': 0.6376874446868896,
+ 'language and communication technologies': 0.6544350981712341,
+ 'native-language identification': 0.6326096057891846,
+ 'natural language processing': 0.7661834955215454,
+ 'natural language user interface': 0.6271583437919617,
+ 'soft computing': 0.6297576427459717,
+ 'transformer (machine learning model)': 0.7037231922149658}
 Spectral
 {'1 the road': 0.5391074192023877,
  'artificial intelligence': 0.6932659261478311,
@@ -210,31 +210,31 @@ Spectral
  'transformer (machine learning model)': 0.5391074192023735,
  'truecasing': 0.5391074192023735}
 FastText
-{'artificial development': 0.8763591,
- 'artificial intelligence marketing': 0.8877276,
- 'existential risk from artificial general intelligence': 0.8733107,
- 'marketing and artificial intelligence': 0.8872095,
- 'natural computation': 0.88826764,
- 'natural language processing': 0.928023,
- 'natural-language processing': 0.9088672,
- 'personality computing': 0.86946464,
- 'philosophy of artificial intelligence': 0.89441824,
- 'progress in artificial intelligence': 0.8691969}
+{'artificial development': 0.8770835,
+ 'artificial intelligence marketing': 0.8877373,
+ 'ethics of artificial intelligence': 0.86994076,
+ 'existential risk from artificial general intelligence': 0.87285364,
+ 'marketing and artificial intelligence': 0.8844211,
+ 'natural computation': 0.88737357,
+ 'natural language processing': 0.92549694,
+ 'natural-language processing': 0.9105267,
+ 'personality computing': 0.87046885,
+ 'philosophy of artificial intelligence': 0.894284}
 
 ----------
 
 social simulation,intelligent agent,chat bot
 Node2Vec
-{'artificial reality': 0.7556433081626892,
- 'cliodynamics': 0.7596275806427002,
- 'era of intelligent agents': 0.7645227313041687,
- 'fuzzy agent': 0.7306588888168335,
- 'intelligent agent': 0.8918653726577759,
- 'journal of artificial societies and social simulation': 0.7490537166595459,
- 'multiple-agent system': 0.7287365198135376,
- 'social simulation': 0.8945969939231873,
- 'synthetic environment for analysis and simulations': 0.7741893529891968,
- 'system dynamics': 0.7370254993438721}
+{'agent-based computational economics': 0.7586658000946045,
+ 'agent-based social simulation': 0.7564862370491028,
+ 'artificial reality': 0.7676952481269836,
+ 'artificial society': 0.7971101403236389,
+ 'intelligent agent': 0.883257269859314,
+ 'journal of artificial societies and social simulation': 0.7621340751647949,
+ 'social simulation': 0.8878085613250732,
+ 'synthetic environment for analysis and simulations': 0.7596999406814575,
+ 'system dynamics': 0.7947274446487427,
+ 'virtual reality': 0.7898703217506409}
 Spectral
 {'artificial reality': 0.6435067111295524,
  'cliodynamics': 0.6435067111295525,
@@ -247,16 +247,16 @@ Spectral
  'system dynamics': 0.6435067111295525,
  'virtual reality': 0.6435067111295525}
 FastText
-{'agent-based social simulation': 0.9014857,
- 'comparison of internet relay chat bots': 0.8571042,
- 'distributed multi-agent reasoning system': 0.8662292,
- 'fuzzy agent': 0.8637217,
- 'intelligent agent': 0.8568341,
- 'intelligent personal assistant': 0.8611021,
- 'interactive online characters': 0.8577053,
- 'internet relay chat bot': 0.86423403,
- 'multi-agent system': 0.8573552,
- 'social bot': 0.85627687}
+{'agent-based social simulation': 0.8993065,
+ 'believable agent': 0.85679513,
+ 'distributed multi-agent reasoning system': 0.8694411,
+ 'fuzzy agent': 0.86000794,
+ 'intelligent agent': 0.8579657,
+ 'intelligent personal assistant': 0.8599609,
+ 'interactive online characters': 0.85605,
+ 'internet relay chat bot': 0.8670349,
+ 'multi-agent system': 0.8570401,
+ 'social bot': 0.8587461}
 
 ----------
 
@@ -266,16 +266,16 @@ None
 Spectral
 None
 FastText
-{'applications of machine learning': 0.8518726,
- 'automated machine learning': 0.8627814,
- 'explanation-based learning': 0.8357486,
- 'feature learning': 0.8399273,
- 'machine learning': 0.8532435,
- 'machine learning in bioinformatics': 0.85030085,
- 'one-shot learning': 0.8362595,
- 'quantum machine learning': 0.8416539,
- 'representation learning': 0.8422215,
- 'rule-based machine learning': 0.8681643}
+{'applications of machine learning': 0.851524,
+ 'automated machine learning': 0.8617151,
+ 'comparison of deep learning software': 0.835665,
+ 'explanation-based learning': 0.836468,
+ 'feature learning': 0.84022284,
+ 'machine learning': 0.85472906,
+ 'machine learning in bioinformatics': 0.84945637,
+ 'quantum machine learning': 0.8398752,
+ 'representation learning': 0.84256434,
+ 'rule-based machine learning': 0.86905885}
 
 ----------
 
@@ -285,16 +285,16 @@ None
 Spectral
 None
 FastText
-{'cash transfers': 0.7471984,
- 'consumer demand tests (animals)': 0.63701856,
- 'fairtax': 0.64591515,
- 'guaranteed minimum income': 0.630618,
- 'negative income tax': 0.66034055,
- 'post-scarcity economy': 0.6451371,
- 'redistribution of income and wealth': 0.67501533,
- 'revenue shortfall': 0.66330373,
- 'universal credit': 0.65673625,
- 'working time': 0.63289404}
+{'cash transfers': 0.746544,
+ 'consumer demand tests (animals)': 0.63958263,
+ 'fairtax': 0.64614576,
+ 'guaranteed minimum income': 0.6321413,
+ 'negative income tax': 0.65971124,
+ 'post-scarcity economy': 0.6478714,
+ 'redistribution of income and wealth': 0.67371047,
+ 'revenue shortfall': 0.6647807,
+ 'universal credit': 0.65638137,
+ 'working time': 0.63036084}
 
 ----------
 
@@ -304,16 +304,16 @@ None
 Spectral
 None
 FastText
-{'applications of machine learning': 0.7974127,
- 'automated machine learning': 0.8557991,
- 'computer-assisted language learning': 0.82309407,
- 'error-driven learning': 0.79965174,
- 'foreign-language reading aid': 0.7963233,
- 'machine learning': 0.79837465,
- 'machine learning in bioinformatics': 0.7992822,
- 'reinforcement learning': 0.8175777,
- 'representation learning': 0.7976885,
- 'rule-based machine learning': 0.8044615}
+{'applications of machine learning': 0.79780716,
+ 'automated machine learning': 0.8571969,
+ 'computer-assisted language learning': 0.8240036,
+ 'error-driven learning': 0.7986829,
+ 'foreign-language reading aid': 0.7967373,
+ 'machine learning': 0.79921466,
+ 'machine learning in bioinformatics': 0.79977155,
+ 'reinforcement learning': 0.8157817,
+ 'representation learning': 0.79832417,
+ 'rule-based machine learning': 0.80596256}
 
 ----------
 
@@ -323,13 +323,13 @@ None
 Spectral
 None
 FastText
-{'applications of machine learning': 0.87991273,
- 'automated machine learning': 0.8880682,
- 'business process execution language': 0.87991834,
- 'computer-assisted language learning': 0.8974967,
- 'foreign language reading aid': 0.8838408,
- 'language technology': 0.8782512,
- 'machine learning': 0.87789303,
- 'machine learning in bioinformatics': 0.8798542,
- 'natural language processing': 0.9059689,
- 'natural-language processing': 0.9044013}
+{'applications of machine learning': 0.880141,
+ 'automated machine learning': 0.88967794,
+ 'business process execution language': 0.88015676,
+ 'computer-assisted language learning': 0.89750755,
+ 'foreign language reading aid': 0.88257545,
+ 'language technology': 0.87820446,
+ 'machine learning': 0.87920964,
+ 'machine learning in bioinformatics': 0.88206387,
+ 'natural language processing': 0.90690255,
+ 'natural-language processing': 0.90574354}
