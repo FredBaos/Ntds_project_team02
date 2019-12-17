@@ -1,11 +1,6 @@
 import numpy as np
 from scipy.spatial.distance import pdist, squareform
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 import random
-
-np.random.seed(42) 
-
 
 def epsilon_similarity_graph(X: np.ndarray, sigma=1, epsilon=0.01):
     """ X (n x d): coordinates of the n data points in R^d.

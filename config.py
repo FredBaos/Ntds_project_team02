@@ -10,3 +10,8 @@ import os
 DATA_PATH = os.path.join(os.getcwd(),'data')
 GENERATED_DATA_PATH = os.path.join(DATA_PATH,'generated')
 OUTPUT_EXPLOITATION_PATH = os.path.join(os.path.join(os.getcwd(),'exploitation'),'output')
+
+import numpy as np
+import random
+random.seed(1)
+np.random.seed(1)

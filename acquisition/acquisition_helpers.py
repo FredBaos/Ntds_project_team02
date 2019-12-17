@@ -12,7 +12,7 @@ from operator import itemgetter
 from pprint import pprint
 
 from config import *
-from exploitation.predict import *
+from helpers.predict import *
 
 
 def get_url(node):

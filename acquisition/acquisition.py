@@ -11,7 +11,7 @@ import os
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from operator import itemgetter
 from config import *
-from exploitation.predict import *
+from helpers.predict import *
 from acquisition_helpers import *
 
 # Creation of dataframes containing nodes and edges information
