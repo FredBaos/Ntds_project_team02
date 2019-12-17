@@ -17,7 +17,7 @@ from acquisition_helpers import *
 # Creation of dataframes containing nodes and edges information
 
 # Loading data
-edge_list = pd.read_csv(os.path.join(DATA_PATH,"ml-nlp-ai-ann-chatbot-ia-dataviz-dist2.tsv"), sep = "\t")
+edge_list = pd.read_csv(os.path.join(DATA_PATH,INITIAL_FILENAME), sep = "\t")
 
 # First, we create the node dataframe by filling the 'url' and 'keywords' columns.
 

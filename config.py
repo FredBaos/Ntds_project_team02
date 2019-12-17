@@ -1,3 +1,4 @@
+INITIAL_FILENAME = "ml-nlp-ai-ann-chatbot-ia-dataviz-dist2.tsv"
 METHODS = ['FastText - Random Walk', 'Node2Vec', 'Spectral Clustering']
 TOPK = 5
 SPECTRAL_CLUSTERING_FILENAME = 'spectral.pkl'
