@@ -25,6 +25,9 @@ vectors = Magnitude(os.path.join(DATA_PATH,"wiki-news-300d-1M-subword.magnitude"
 
 class QueryBot:
     def __init__(self, node2vec_model, proj_spectral, name2idx_adjacency, ordered_nodes, fasttext_vectors, fasttext_dict, df_node):
+        """The query bot is fed the 3 different models we have trained. 
+        Given a query it returns the top k articles according to the model picked.
+        """
         self.node2vec = node2vec_model
         
         self.proj_spectral =  proj_spectral
@@ -47,12 +50,14 @@ class QueryBot:
             print("Wrong Method")
 
 def compute_similarities_matrix(vector, proj, topk):
+    """Outputs the indexes and similarities of the topk vectors for a query vector vector."""
     similarities = cosine(vector,proj).reshape(-1)
     top_k_indexes = list(np.argsort(similarities)[-topk:])
     top_k_similarities = similarities[top_k_indexes]
     return dict(zip(top_k_indexes, top_k_similarities))
 
 def query_answers_spectral(query, matrix, ordered_nodes, df_node, name2idx_adjacency, topn=10, return_idx=True):
+    """Outputs the articles and similarities of the topn articles for a query according to the spectral clustering model."""
     query = query.lower()
     splitted_query = query.split(',')
     filtered_query = []
@@ -93,6 +98,7 @@ def compute_similarities(vector, corpus, top_n=10):
     return similarities
 
 def query_answers_fasttext(query,vectors,walk_averaged_embeddings_dict_fastt,df_node,topn=10, return_idx=True):
+    """Outputs the articles and similarities of the topn articles for a query according to the walk averaged fasttext model."""
     embedding = vectors.query(query.replace(',', ' ').split()).mean(axis=0)
     similarities = compute_similarities(embedding, walk_averaged_embeddings_dict_fastt,topn)
     if return_idx:
@@ -105,6 +111,7 @@ def query_answers_fasttext(query,vectors,walk_averaged_embeddings_dict_fastt,df_
         return similarities
 
 def query_answers_node2vec(query, model, df_node, topk, return_idx=True):
+    """Outputs the articles and similarities of the topn articles for a query according to the node2vec model."""
     query = query.lower()
     splitted_query = query.split(',')
     filtered_query = filter(lambda x: x in model.wv.vocab, splitted_query)
@@ -132,6 +139,7 @@ def query_answers_node2vec(query, model, df_node, topk, return_idx=True):
     return output_dict
     
 def load_models():
+    """Loads the models and feeds them to a Query Bot."""
     
     with open(os.path.join(GENERATED_DATA_PATH,SPECTRAL_CLUSTERING_FILENAME),'rb') as f:
         spectral_clustering_embed = pickle.load(f)
@@ -172,6 +180,7 @@ def plot_projection(node_vectors, nodes, path, dim=2, projection_method=PCA, per
     plt.savefig(path)
 
 def get_vectors_spectral(nodes, proj, name2idx_adjacency):
+    """Given a set of nodes, returns the associated spectral embeddings."""
     vectors = []
     for node in nodes:
         idx = name2idx_adjacency[node]
@@ -190,6 +199,14 @@ def get_weighted_walk_of_embeddings(walk, embeddings_dict, source_weight=0.75):
     return source_weight*embeddings[0] + walk_weight*sum(embeddings[1:])
 
 def walk_averaged_embeddings_dict(embeddings_dict, walks, source_weight=0.75):
+    """Core function of the walk averaged fasttext model.
+    Args:
+        embeddings_dict: dict associating articles to their fasttext embedding
+        walks: list of sequences of articles
+
+    Returns: 
+        A new dict associating articles to their walk averaged embeddings.
+    """
     walk_embeddings_dict = {k:[] for k in embeddings_dict.keys()}
 
     for walk in walks:
@@ -199,6 +216,7 @@ def walk_averaged_embeddings_dict(embeddings_dict, walks, source_weight=0.75):
     return walk_averaged_embeddings_dict
 
 def get_vectors_fasttext(nodes, walk_averaged_embeddings_dict_fastt):
+    """Given a set of articles and an article to embedding dict, returns the associated embeddings."""
     vectors = []
     for node in nodes:
         vector = walk_averaged_embeddings_dict_fastt[node]

@@ -10,13 +10,12 @@ import re
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from operator import itemgetter
 from pprint import pprint
-
 from config import *
 from helpers.predict import *
 
 
 def get_url(node):
-    "Robust to spelling and lower case/upper case errors"
+    """Get the url associated to a node. Robust to spelling and lower case/upper case errors"""
     try:
         return wikipedia.page(node).url
     except wikipedia.DisambiguationError as e:
@@ -26,7 +25,7 @@ def get_url(node):
         return "https://en.wikipedia.org/wiki/" + node.replace(" ", "_")
     
 def get_summary(node, num_chars=1000):
-    "Robust to spelling and lower case/upper case errors"
+    """Get summary associated to an article. Robust to spelling and lower case/upper case errors"""
     try:
         return wikipedia.summary(node, chars=num_chars)[:num_chars] # summary may not return exactly num_chars
     except wikipedia.DisambiguationError as e:
@@ -51,7 +50,7 @@ def pre_process(text):
     return text
 
 def get_stop_words(stop_file_path):
-    """load stop words """
+    """Load stop words"""
     with open(stop_file_path, 'r', encoding="utf-8") as f:
         stopwords = f.readlines()
         stop_set = set(m.strip() for m in stopwords)
@@ -62,7 +61,7 @@ def sort_coo(coo_matrix):
     return sorted(tuples, key=lambda x: (x[1], x[0]), reverse=True)
 
 def extract_topn_from_vector(feature_names, sorted_items, topn=10):
-    """get the feature names and tf-idf score of top n items"""
+    """Get the feature names and tf-idf score of top n items."""
     
     sorted_items = sorted_items[:topn]
 
@@ -81,6 +80,14 @@ def extract_topn_from_vector(feature_names, sorted_items, topn=10):
     return results
 
 def get_keywords(doc, tfidf_transformer, cv):
+    """Extracts top 10 keywords from a document.
+    Args:
+        doc: string representation of a document
+        tf_idf_transformer: tf_idf transformer built from corpus
+        cv = count vectorizer
+    Returns: 
+        Top 10 keywords.
+    """
     
     #generate tf-idf for the given document
     tf_idf_vector=tfidf_transformer.transform(cv.transform([doc]))

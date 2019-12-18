@@ -24,7 +24,7 @@ edge_list = pd.read_csv(os.path.join(DATA_PATH,INITIAL_FILENAME), sep = "\t")
 df_node = pd.DataFrame(columns=['name','url', 'keywords'])
 df_node['name'] = pd.unique(edge_list.source.append(edge_list.target))
     
-# takes a long time to run, load a pickle by default
+# Takes a long time to run, load a pickle by default
 is_saved = True
 
 if not is_saved:
@@ -42,7 +42,7 @@ df_node['url'] = urls
 
 # Then, we create lists of keywords for each page by doing TF-IDF on pages summaries.
 
-# takes a long time to run, summaries are saved in a pickle by default
+# Takes a long time to run, summaries are saved in a pickle by default
 is_saved = True
 
 if not is_saved:
@@ -69,12 +69,12 @@ word_count_vector = cv.fit_transform(docs)
 tfidf_transformer = TfidfTransformer(smooth_idf=True,use_idf=True)
 tfidf_transformer.fit(word_count_vector)
 
-# adding keywords to df_node
+# Adding keywords to df_node
 df_node['keywords'] = [list(get_keywords(docs[idx], tfidf_transformer, cv).keys()) for idx in range(len(df_node))]
 
 df_node.to_csv(os.path.join(GENERATED_DATA_PATH,DF_NODE_FILENAME))
 
-# Then, we create the edge dataframe, containing links between nodes.
+# Then we create the edge dataframe, containing links between nodes.
 df_edge = pd.DataFrame(columns=['source','target'])
 df_edge['source'] = [df_node[df_node.name==name].index.values[0] for name in edge_list.source]
 df_edge['target'] = [df_node[df_node.name==name].index.values[0] for name in edge_list.target]

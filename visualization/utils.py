@@ -8,11 +8,10 @@ import plotly.graph_objs as go
 import pickle
 from ipywidgets import widgets
 from scipy.special import softmax
-
 from config import *
 
-# Create HTML formatted text for the answer of the query
 def create_text(keys_ls,df_node):
+    """Create HTML formatted text for the answer of the query."""
     if len(keys_ls) == 0:
         base_text = "\n \n No pages found"
     else:
@@ -25,9 +24,8 @@ def create_text(keys_ls,df_node):
             base_text += url_text
     return base_text
 
-# Compute color for the nodes
-# Return a dict where the key is node index and the value is a float for the colorscale
 def compute_color(preds):
+    """Compute color for the nodes. Return a dict where the key is node index and the value is a float for the colorscale."""
     all_scores = list(preds.values())
     color_values = softmax(all_scores)
     color_output = {}
