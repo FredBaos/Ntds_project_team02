@@ -27,7 +27,7 @@ df_edge = pd.read_csv(os.path.join(GENERATED_DATA_PATH,DF_EDGE_FILENAME)).drop('
 
 # Create placeholders for graph information
 labels = df_node['name'].tolist()
-color_node = ['rgba(200,200,200,0.05)' for i in range(3*len(labels))]
+color_node = ['rgba(255,255,255,0.05)' for i in range(3*len(labels))]
 color_node_original = color_node.copy()
 texts_to_show = [None for i in range(len(labels))]
 texts_to_show_original = texts_to_show.copy()
@@ -93,18 +93,20 @@ app.layout = html.Div(
                                     value="Node2Vec",
                                     className="radio__group",
                                 ),
+                                
                                 dcc.Markdown(
-                                    id='answer'
+                                    id='answer',
                                 ),
+
+                                dcc.Markdown(id="url",
+                                className='url_center',),
 
                                 dcc.Graph(
                                     id="graph",
                                     figure=FIGURE,
                                 ),
-
-                                dcc.Markdown(id="url"),
                             ],
-                            className="two-thirds column",
+
                         ),
                     ],
                     className="container card app__content bg-white",
@@ -132,7 +134,8 @@ with g.batch_update():
     g.data[1].text = texts_to_show_original.copy()
     g.data[0].line.color = color_edge_original.copy()
     g.data[0].line.width = 10
-
+    g.data[1].marker.colorscale = 'Magma'
+    g.data[0].opacity = 0.5
 
 # Open url when clicking on node
 def update_point(trace, points, selector):

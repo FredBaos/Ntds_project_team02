@@ -57,7 +57,13 @@ p {
 }
 
 .app__input {
-    padding: 15px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.url_center {
+    padding-left: 30px;
     display: flex;
     justify-content: center;
 }
