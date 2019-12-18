@@ -136,6 +136,7 @@ with g.batch_update():
     g.data[0].line.width = 10
     g.data[1].marker.colorscale = 'Magma'
     g.data[0].opacity = 0.5
+    g.data[1].textfont['size'] = 40
 
 # Open url when clicking on node
 def update_point(trace, points, selector):
@@ -195,6 +196,8 @@ def make_query(ns,nb,current_selector,query):
                 size_node[k] = 30
                 color_node[k] = v
                 texts_to_show[k] = labels[k]
+                for i in df_edge[df_edge.source == k]['target'].values:
+                    texts_to_show[i] = labels[i]
             
             edges_idx = find_index_edges(list(preds.keys()))
             for idx in edges_idx:
