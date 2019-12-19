@@ -2,7 +2,6 @@ import igraph as ig
 import chart_studio.plotly as py
 import pandas as pd
 import webbrowser
-import json
 import urllib.request
 import plotly.graph_objs as go
 import pickle
@@ -34,7 +33,18 @@ def compute_color(preds):
         color_output[k] = v/diff
     return color_output
 
+def find_index_edges(nodes_ls, df_edge):
+    edges_idx = []
+    for source in nodes_ls:
+        for target in nodes_ls:
+            filtered = df_edge[((df_edge.source == source) & (df_edge.target == target) ) | ( (df_edge.source == target) & (df_edge.target == source) )]
+            if len(filtered)!=0:
+                edges_idx.append(filtered.index.values[0])
+                
+    return edges_idx
+
 def create_plot_items(df_node,df_edge,labels,color_node,texts_to_show,color_edge):
+    "Create Scatter3d plotly graph "
     N = len(df_node)
     
     # Extract list
@@ -120,50 +130,25 @@ def create_plot_items(df_node,df_edge,labels,color_node,texts_to_show,color_edge
     return g
 
 def create_and_save_plot():
+    "Create the plot and save it for the interactive visualisation"
     df_node = pd.read_csv(os.path.join(GENERATED_DATA_PATH,DF_NODE_FILENAME)).drop('Unnamed: 0',axis=1)
     df_edge = pd.read_csv(os.path.join(GENERATED_DATA_PATH,DF_EDGE_FILENAME)).drop('Unnamed: 0',axis=1) 
 
+    #Page name of node
     labels = df_node['name'].tolist()
+    #Color of node
     color_node = ['rgba(200,200,200,0.05)' for i in range(3*len(labels))]
+    #Texts displayed by node
     texts_to_show = [None for i in range(len(labels))]
-    size_node = [15 for i in range(len(labels))]
+    #Edge color
     color_edge = ['rgba(128,128,128,0.7)' for _ in range(3*len(df_edge))]
 
     g = create_plot_items(df_node,df_edge,labels,color_node,texts_to_show,color_edge)
     with open(os.path.join(GENERATED_DATA_PATH,'graph.pkl'),'wb') as f:
         pickle.dump(g,f)
 
-
 def load_graph():
+    "Load graph file"
     with open(os.path.join(GENERATED_DATA_PATH,'graph.pkl'),'rb') as f:
-        g = pickle.load(f)
-    
-    # Title of the visualization
-    title = widgets.HTML(
-        value="<h3> Wikipedia Recommender System </h3>",
-    )
-
-    # Some help text
-    annotations = widgets.HTML(
-        value="<h4> By clicking on a node, you will be directed on the corresponding web page. </h4>",
-    )
-    
-    # Text Box for the query
-    textbox_query = widgets.Text(
-        value='',
-        placeholder='Type something',
-        description='Query:',
-        disabled=False
-    )
-
-    # Select Method
-    selector = widgets.Select(
-        options=METHODS,
-        value='Node2Vec',
-        description='Method:',
-        disabled=False
-    )
-
-    query_answer = widgets.HTML(value='')
-    
-    return title, annotations, textbox_query, selector, query_answer, g
+        g = pickle.load(f)   
+    return g

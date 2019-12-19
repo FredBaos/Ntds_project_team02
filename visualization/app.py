@@ -1,11 +1,11 @@
+# Inspired from https://plot.ly/python/v3/3d-network-graph/
+
 import dash
 import pandas as pd
 import dash_html_components as html
 import dash_core_components as dcc
 import webbrowser
-import json
 import urllib.request
-import bs4 as bs
 from dash.dependencies import Input, Output, State
 from dash.exceptions import PreventUpdate
 
@@ -20,8 +20,7 @@ app = dash.Dash(
 
 server = app.server
 
-
-#Load data for the graph
+# Load data for the graph
 df_node = pd.read_csv(os.path.join(GENERATED_DATA_PATH,DF_NODE_FILENAME)).drop('Unnamed: 0',axis=1)
 df_edge = pd.read_csv(os.path.join(GENERATED_DATA_PATH,DF_EDGE_FILENAME)).drop('Unnamed: 0',axis=1)
 
@@ -36,14 +35,17 @@ size_node_original = size_node.copy()
 color_edge = ['rgba(128,128,128,0.7)' for _ in range(3*len(df_edge))]
 color_edge_original = color_edge.copy()
 
-_, _, _, _, _, g = load_graph()
+# Load graph 
+g = load_graph()
+# Create figure
 FIGURE = {
                 'data': [g.data[0],g.data[1]],
                 'layout': g.layout
          }
+# Load query models
 query_bot = load_models()
 
-
+# HTML layout
 app.layout = html.Div(
     [
         html.Div(
@@ -57,10 +59,14 @@ app.layout = html.Div(
                                     className="uppercase title",
                                 ),
                                 html.Span(
-                                    "By clicking on a node, you will be directed on the corresponding web page."
+                                    "By clicking on a node, 'Chosen node' link will redirect you to the corresponding web page."
                                 ),
                                 html.Br(),
-                                html.Span("Red edges mean that the pages are in the See also section on Wikipedia website."),
+                                html.Span("The page title of nodes that best fit the query as well as the neighbours are shown."),
+                                html.Br(),
+                                html.Span(
+                                    "Red edges mean that the pages are in the 'See also' section on Wikipedia website."
+                                ),
                                 html.Br(),
                                 html.Span(
                                     "The color represents the cosine similarity score."
@@ -117,6 +123,9 @@ app.layout = html.Div(
                         html.P(
                                     "By Team 2 - Network Tour of Data Science - EPFL"
                                 ),
+                        html.A('Github code',
+                            href='https://github.com/FredBaos/Ntds_project_team02'
+                        ),
                     ],
                     className="container p-0",
                 ),
@@ -128,6 +137,7 @@ app.layout = html.Div(
     ]
 )
 
+# Initialization of graph information
 with g.batch_update():
     g.data[1].marker.color = color_node_original.copy()
     g.data[1].marker.size = size_node_original.copy()
@@ -138,12 +148,7 @@ with g.batch_update():
     g.data[0].opacity = 0.5
     g.data[1].textfont['size'] = 40
 
-# Open url when clicking on node
-def update_point(trace, points, selector):
-    if len(points.point_inds) != 0:
-        url = g.data[1].customdata[points.point_inds[0]]
-        webbrowser.open_new_tab(url)
-   
+# Open url when clicking on a node
 @app.callback(
     Output('url', 'children'),
     [Input('graph', 'clickData')]
@@ -161,23 +166,15 @@ def display_click_data(clickData):
                 return None
     return None
 
-def find_index_edges(nodes_ls):
-    edges_idx = []
-    for source in nodes_ls:
-        for target in nodes_ls:
-            filtered = df_edge[((df_edge.source == source) & (df_edge.target == target) ) | ( (df_edge.source == target) & (df_edge.target == source) )]
-            if len(filtered)!=0:
-                edges_idx.append(filtered.index.values[0])
-                
-    return edges_idx
-
+# On a new query, compute the predictions, color the nodes and edges accordingly.
+# Show title of relevant nodes (answers + neighbours)
 @app.callback(
     [Output("answer", "children"),Output('graph', 'figure')],
     [Input("query", "n_submit"),Input("query", "n_blur"),Input("method_radio", "value")],
     [State("query","value")]
 )
-# On a new query, compute the predictions and color the nodes accordingly
 def make_query(ns,nb,current_selector,query):
+    # Initialize the information back to zero normal state.
     texts_to_show = texts_to_show_original.copy()
     color_node = color_node_original.copy()
     size_node = size_node_original.copy()
@@ -187,11 +184,14 @@ def make_query(ns,nb,current_selector,query):
     if query != "":
         preds = query_bot.make_prediction(query, current_selector)
         if preds == None:
+            # Show no pages found
             markdown_text = create_text([],df_node)
         else:
             dict_colors = compute_color(preds)
             markdown_text = create_text(list(dict_colors.keys()),df_node)
 
+            # Change chosen nodes size and color
+            # Display title page of chosen nodes and their neighbours
             for k,v in dict_colors.items():
                 size_node[k] = 30
                 color_node[k] = v
@@ -199,11 +199,12 @@ def make_query(ns,nb,current_selector,query):
                 for i in df_edge[df_edge.source == k]['target'].values:
                     texts_to_show[i] = labels[i]
             
-            edges_idx = find_index_edges(list(preds.keys()))
+            # Color in red edges between chosen nodes
+            edges_idx = find_index_edges(list(preds.keys()),df_edge)
             for idx in edges_idx:
                 color_edge[3*idx] = 'rgb(255,0,0,1)'
             
-
+        # Update the graph
         with g.batch_update():
             g.data[1].marker.size = size_node
             g.data[1].marker.color = color_node
@@ -217,5 +218,6 @@ def make_query(ns,nb,current_selector,query):
 
     return markdown_text, fig
 
+# Run server on port 80 need to be opened for full access
 if __name__ == "__main__":
     app.run_server(host="0.0.0.0", port=80, debug=True)
