@@ -2,4 +2,6 @@
 */.ipynb_checkpoints/*
 __pycache__
 */__pycache__/*
-wiki-news-300d-1M-subword.magnitude
+data/wiki-news-300d-1M-subword.magnitude
+ntdsproj
+*/ntdsproj/*

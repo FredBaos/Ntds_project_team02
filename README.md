@@ -10,23 +10,28 @@ More details about this ML system can be found in the project [report](report.pd
 
 ### How to reproduce results:
 
-wd is the directory containing the [run.sh](run.sh) script
-- `export PYTHONPATH=wd`
+Note that 'wd' is the directory containing the [run.sh](run.sh) script (in the project folder).
+
+- Run the command `export PYTHONPATH=wd`
 
 **NOTE**: if you want to use a virtual environment, run the following:
+
 - `python3 -m venv ntds`
 - `echo 'export PYTHONPATH=wd' >> ntds/bin/activate`
 
 From wd, run the following:
+- Run the command `sudo apt install build-essential python-dev libxml2 libxml2-dev zlib1g-dev bison flex`
 - `pip3 install -r requirements.txt`
 - `pip3 install pymagnitude==0.1.120 --no-binary :all:`
-- Specify INITIAL_FILENAME in [config.py](config.py). This is the path to the dataset produced on [Seealsology](https://densitydesign.github.io/strumentalia-seealsology/) (to put in the [data](/data) folder). The seeds to scrap the graph are given in the [seeds_seealsology.txt](/data/seeds_seealsology.txt)  file (use a max distance of 2).
+- Specify INITIAL_FILENAME in [config.py](config.py). This is the name of the file produced on [Seealsology](https://densitydesign.github.io/strumentalia-seealsology/) (to put in the [data](/data) folder). The seeds to scrap the graph are given in the [seeds_seealsology.txt](/data/seeds_seealsology.txt)  file (we used a distance of 2).
 - Download the [wiki-news-300d-1M-subword.magnitude](http://magnitude.plasticity.ai/fasttext/light/wiki-news-300d-1M-subword.magnitude) file at and put it into the [data](/data) folder.
-- Execute the [run.sh](run.sh) script.
+- Execute the [run.sh](run.sh) script (takes a few minutes to run).
 - Run [exploration.ipynb](exploration.ipynb) and/or [exploitation.ipynb](exploitation/exploitation.ipynb) for the respective analysis.
 
 ### Interactive Visualisation:
-After having done the previous part, run the command: `sudo PYTHONPATH=wd python3 visualization/app.py`
+After having done the previous part, run the command: `python3 visualization/app.py 8888`
+
+**NOTE**: if you want to put the app online like on the following [link](), you have to do all the above installs in "sudo" mode, and run the following command instead: `sudo PYTHONPATH=wd python3 visualization/app.py 80`. Another option is that you enable port 80 for current user.
 
 You can choose any of the three methods to perform a query. 
 

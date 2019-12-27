@@ -1,5 +1,6 @@
 # Inspired from https://plot.ly/python/v3/3d-network-graph/
 
+import sys
 import dash
 import pandas as pd
 import dash_html_components as html
@@ -220,4 +221,4 @@ def make_query(ns,nb,current_selector,query):
 
 # Run server on port 80 need to be opened for full access
 if __name__ == "__main__":
-    app.run_server(host="0.0.0.0", port=80, debug=True)
+    app.run_server(host="0.0.0.0", port=int(sys.argv[1]), debug=True)
