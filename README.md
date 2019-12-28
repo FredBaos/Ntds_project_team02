@@ -31,7 +31,7 @@ From wd, run the following:
 ### Interactive Visualisation:
 After having done the previous part, run the command: `python3 visualization/app.py 8888`
 
-**NOTE**: if you want to put the app online like on the following [link](http://ec2-3-16-203-172.us-east-2.compute.amazonaws.com/), you have to do all the above installs in "sudo" mode, and run the following command instead: `sudo PYTHONPATH=wd python3 visualization/app.py 80`. Another option is that you enable port 80 for current user.
+**NOTE**: if you want to put the app online like on the following [link](), you have to do all the above installs in "sudo" mode, and run the following command instead: `sudo PYTHONPATH=wd python3 visualization/app.py 80`. Another option is that you enable port 80 for current user.
 
 You can choose any of the three methods to perform a query. 
 
