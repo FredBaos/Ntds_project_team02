@@ -79,4 +79,10 @@ Data:
 - Myotte Frédéric
 - Sinnathamby Karthigan
 
-*Network Tour of Data Science course - EPFL - Fall 2019 - Team 2*
+### License
+
+Wikipedia Recommender System - *Network Tour of Data Science EE-558 - EPFL - Fall 2019 - Team 2*
+
+Copyright (c) 2019 EPFL
+
+This program is licensed under the terms of the [GPL](https://github.com/FredBaos/Ntds_project_team02/blob/master/LICENSE).
