@@ -6,7 +6,7 @@ We implemented a query-based search engine for Wikipedia articles related to var
 
 In other words, given a query our system will retrieve and suggest articles with similar semantic contents. Moreover, we provide a graph visualisation tool to interact with the query engine.
 
-More details about this ML system can be found in the project [report](report.pdf).
+More details about this ML system can be found in the project [report](Team 02 - Project report.pdf).
 
 ### How to reproduce results:
 
